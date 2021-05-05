@@ -3,7 +3,7 @@ using namespace std;
 
 
 // Verified 
-//
+// This is possibly only when every vertex in a graph is connected
 vector<int> bfsOfGraph(int v,vector<int> adj[]){
     vector<int>answer;
     vector<bool> visited(v ,false);
@@ -69,6 +69,12 @@ int main(){
     answer = bfs(vertices,adj);
     
     cout << "BFS of the given graph is " << endl;
+    for(auto i : answer){
+        cout << i << " ";
+    }
+    cout << endl;
+
+    answer = bfsOfGraph(vertices,adj);
     for(auto i : answer){
         cout << i << " ";
     }
