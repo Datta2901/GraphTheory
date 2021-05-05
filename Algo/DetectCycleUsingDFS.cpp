@@ -1,25 +1,19 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-
-//DFS recursive implementation
-void DFSRecursive(int curr,vector<bool>& visited,vector<int> adj[],vector<int>& answer){
-    answer.push_back(curr);
-    visited[curr] = true;
-    for(auto it : adj[curr]){
-        if(!visited[it]){
-            DFSRecursive(it,visited,adj,answer);
+bool isThereAcycle(int source,int parent,vector<bool>& visited,vector<int> adj[]){
+   visited[source] = true;
+    for(auto i : adj[source]){
+        if(!visited[i]){
+            if(isThereAcycle(i,source,visited,adj)){
+                return true;
+            }
+        }else if(i != parent){
+            return true;
         }
     }
-}   
-
-/*
-    Just applying DFS on a graph 
-    if there is no cycle means we can reach from one node to any node.
-    Else we are counting how many times it is coming to the dfs call and
-    counting it
-*/
-
+    return false;
+}
 
 int main(){
     int vertices,edges;
@@ -43,36 +37,27 @@ int main(){
         cout << endl;
     }
 
-    int count = 0;
-    bool control = true;
     vector<bool> visited(vertices + 1,false);
+    bool flag = true;
     for(int i = 1; i <= vertices; i++){
         if(!visited[i]){
-            DFSRecursive(i,visited,adj,answer);
-            count++;
-        }
-        if(count > 1){
-            control = false;
-            break;
+            if(isThereAcycle(i,-1,visited,adj)){
+                flag = false;
+                break;
+            }
         }
     }
-    if(control){
-        cout << "Given Graph doesnot have any cycle\n";
+
+    if(flag){
+        cout << "There is no cycle in the given graph " << endl;
     }else{
-        cout << "Given Graph has Cycles\n";
+        cout << "There is a cycle in the given graph " << endl;
     }
 
     /* 
         Time complexity of BFS will be O(n + E)
         Time for visiting n nodes and e for visiting adjacent nodes in Adjacency list
-
-        Implementing using DFS recursive implementation
-        
-        Space Complexity will be O(N + E)       + O(N)     
-                                Adjacency list    visited        
     */
     return 0;
+
 }
-
-
-

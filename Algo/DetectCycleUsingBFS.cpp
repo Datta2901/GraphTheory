@@ -54,7 +54,7 @@ int main(){
     bool control = true;
     for(int i = 1; i < vertices; i++) {
         if(!visited[i]){
-            if(isThereAcycle(1,visited,adj)){
+            if(isThereAcycle(i,visited,adj)){
                 control = false;
                 cout << "There is a cycle in the given graph " << endl;
                 break;
