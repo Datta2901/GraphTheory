@@ -67,6 +67,16 @@ int main(){
         adj[v].push_back(u);
     }
 
+    cout << "Adjacency list of given graph is " << endl;
+    for(int i = 0; i <= vertices; i++){
+        cout << i << " : ";
+        for(auto j : adj[i]){
+            cout << j << " ";
+        }
+        cout << endl;
+    }
+
+
     answer = bfs(vertices,adj);
     
     cout << "BFS of the given graph is " << endl;
