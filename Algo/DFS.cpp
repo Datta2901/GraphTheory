@@ -90,6 +90,15 @@ int main(){
     cout << endl;
 
     return 0;
+
+    /* 
+        Similar to bfs 
+        Time complexity of BFS will be O(n + E)
+        Time for visiting n nodes and e for visiting adjacent nodes in Adjacency list
+
+        Space Complexity will be O(N + E)       + O(N)      +  O(N)
+                                Adjacency list    visited     Stack    
+    */
 }
 
 
