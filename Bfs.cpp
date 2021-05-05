@@ -27,11 +27,12 @@ vector<int> bfsOfGraph(int v,vector<int> adj[]){
 
 
 // Bfs for the indexing one with more time complexity
+// And works for any graph 
 vector<int> bfs(int vertices,vector<int> adj[]){
     vector<int>answer;
     vector<bool> visited(vertices + 1,false);
     queue<int> track;
-
+    
     for(int i = 1; i <= vertices; i++){
         if(!visited[i]){
             visited[i] = true;
