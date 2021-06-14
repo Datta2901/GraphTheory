@@ -54,7 +54,7 @@ int main(){
             }
         }
     }
-    if(true){
+    if(control){
         cout << "Given Graph is bipartite " << endl;
     }
 
