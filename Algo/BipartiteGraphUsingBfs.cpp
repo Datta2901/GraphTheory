@@ -60,3 +60,9 @@ int main(){
 
     return 0;
 }
+
+/*
+    time complexity : O(N + E)
+    space complexity : O(N + E) +  O(N)  +  O(N)
+                        adj        Queue    colour 
+*/
