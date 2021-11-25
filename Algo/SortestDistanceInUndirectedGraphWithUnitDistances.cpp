@@ -9,7 +9,7 @@ void bfs(vector<int> adj[],vector<int>&distance,int source){
         int node = track.front();
         track.pop();
         for(auto it : adj[node]){
-            if(distance[it] == INT_MAX){
+            if(distance[it] == INT_MAX){ // or if(distance[node] + 1 < distance[it])
                 distance[it] = distance[node] + 1;
                 track.push(it);
             }
