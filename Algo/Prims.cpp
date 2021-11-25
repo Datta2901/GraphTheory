@@ -13,7 +13,7 @@ void PrimsBruteForce(vector<pair<int,int>> adj[],int vertices,vector<int>&distan
     parent[source] = -1;
     for(int i = 0; i < vertices - 1; i++){
         int mini = INT_MAX,index;
-        // finding the minimum weight in key which is not in the part of mst
+        // finding the minimum weight in distance which is not in the part of mst
         for(int j = 0; j < vertices; j++){
             if(mini > distance[j] && Mst[j] == false){
                 mini = distance[j];
@@ -43,7 +43,7 @@ void Prims(vector<pair<int,int>> adj[],int vertices,vector<int>&distance,int sou
     parent[source] = -1;
     track.push({distance[source],source});
     while(!track.empty()){
-        int index = track.top().second;//gives you minimal index in logn
+        int index = track.top().second;//gives you minimal index in log n
         track.pop();
         Mst[index] = true;// including in mst
         // traversing through neighbor's of index
