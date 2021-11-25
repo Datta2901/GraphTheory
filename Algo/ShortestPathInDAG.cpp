@@ -1,6 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+// idea is to get the topo sort 
+//  do bfs on the stack we get 
 
 void dfs(vector<pair<int,int> >adj[],vector<bool>&visited,int source,stack<int>&topo){
     visited[source] = true;
