@@ -1,0 +1,13 @@
+Eulerian Path: A path of graph G is called an Eulerian path, if it includes each edge of G exactly once
+
+Eulerian Circuit: A circuit of a graph G is called an Eulerian circuit, if it include each edge of G exactly once.
+
+Eulerian Graph: A graph containing an Eulerian circuit is called an Euler graph
+
+Hamiltonian Path: A path of a graph G is called a Hamiltonian path, if it includes each vertex of G exactly once.
+
+Hamiltonian Circuit: A circuit of a graph G is called a Hamiltonian circuit, if it includes each vertex of G exactly once, except the starting and end vertices which appear twice.
+
+Hamiltonian Graph: A graph containing a Hamiltonian circuit is called a Hamiltonian graph.
+
+Catalan Number: Is the smallest number of colors with which it can be colored
