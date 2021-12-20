@@ -1,8 +1,8 @@
+// KosaRaju’s algorithm
 #include<bits/stdc++.h>
 using namespace std;
 
 // Approach : 
-
 // Do a topo sort on the original graph 
 // Now transpose the graph (if u -> v in original graph then make v -> u)
 // Now traverse on the topo sort and make a dfs
