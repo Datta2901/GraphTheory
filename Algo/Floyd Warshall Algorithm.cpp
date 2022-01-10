@@ -12,6 +12,7 @@ bool FloydWarshall(int vertices, vector<vector<int> > &edges,vector<vector<int> 
         distance[i][i] = 0;
     }
 
+    // Assigning the weights to the distance vector
     for(auto it : edges){
         int u = it[0];
         int v = it[1];
