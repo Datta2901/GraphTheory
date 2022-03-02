@@ -61,8 +61,8 @@ class DSURank{
                 parent[parV] = parU;
                 rank[parU]++;
             }else{
-                parent[parV] = parU;
-                rank[parU] += 1;
+                parent[parU] = parV;
+                rank[parV] += 1;
             }
         }
 
